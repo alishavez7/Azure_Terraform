@@ -19,3 +19,8 @@ variable "Rg_name" {
 variable "location" {
   description = "resource location"
 }
+
+variable "subnet_id" {
+  description = "Subnet ID"
+  
+}

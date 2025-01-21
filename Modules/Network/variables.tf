@@ -16,3 +16,11 @@ variable "SubnetAddressSpace" {
     default     = "192.168.1.128/25"
   
 }
+
+variable "Rg_name" {
+  description = "Resource Group Name"
+}
+
+variable "location" {
+  description = "resource location"
+}

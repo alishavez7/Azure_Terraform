@@ -1,19 +1,14 @@
-resource "azurerm_resource_group" "Rg_name" {
-    name     = "var.Rg_name"
-    location = "var.location"
-    tags = {
-        environment = "Production"
-    }
-  
-}
 
 module "Network" {
-    source = "./Modules/Network"
-  
+  source = "./Modules/Network"
+  Rg_name = "var.Rg_name"
+  location = "var.location"
+
 }
 
 
 module "Compute" {
-    source = "./Modules/Compute"
-  
+  source = "./Modules/Compute"
+    Rg_name = "var.Rg_name"
+  location = "var.location"
 }

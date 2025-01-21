@@ -1,7 +1,7 @@
 resource "azurerm_network_interface" "vmname_nic" {
     name                = "var.Nic_name"
-    location            = azurerm_resource_group.Rg_name.location
-    resource_group_name = azurerm_resource_group.Rg_name.name
+    location            = "var.location"
+    resource_group_name = "var.Rg_name"
 
     ip_configuration {
         name                          = "internal"
@@ -17,8 +17,8 @@ resource "azurerm_network_interface" "vmname_nic" {
 
 resource "azurerm_virtual_machine" "vmname" {
     name                  = "var.Vm_name"
-    location              = azurerm_resource_group.Rg_name.location
-    resource_group_name   = azurerm_resource_group.Rg_name.name
+    location              = "var.location"
+    resource_group_name   = "var.Rg_name"
     network_interface_ids = [azurerm_network_interface.vmname_nic.id]
     vm_size               = "Standard_DS1_v2"
 

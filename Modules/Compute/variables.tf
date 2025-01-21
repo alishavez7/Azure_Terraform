@@ -11,3 +11,11 @@ variable "nic_name" {
     default     = "tftestvm_nic"
   
 }
+
+variable "Rg_name" {
+  description = "Resource Group Name"
+}
+
+variable "location" {
+  description = "resource location"
+}

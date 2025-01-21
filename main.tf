@@ -1,4 +1,9 @@
 
+module "ResourceGroup" {
+  source = "./Modules/ResourceGroup"
+  Rg_name = "var.Rg_name"
+  
+}
 module "Network" {
   source = "./Modules/Network"
   Rg_name = "var.Rg_name"
